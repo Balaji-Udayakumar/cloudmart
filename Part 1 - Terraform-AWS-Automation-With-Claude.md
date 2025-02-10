@@ -1,4 +1,4 @@
-# Terraform-AWS-Automation-With-Claude - Part 1
+# Part 1 - Terraform-AWS-Automation-With-Claude
 
 <aside>
 </aside>
