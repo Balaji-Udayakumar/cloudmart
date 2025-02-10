@@ -1,10 +1,6 @@
-# MultiCloud, DevOps & AI Challenge - Day 1 - Experienced
+# Terraform-AWS-Automation-With-Claude - Part 1
 
 <aside>
-💡
-
-Remember to use the class replay as a reference.
-
 </aside>
 
 # Streamlined Guide: Using Claude as AI Assistant to Terraform
@@ -215,5 +211,3 @@ resource "aws_dynamodb_table" "cloudmart_tickets" {
     ```
     
 2. Type "yes" when prompted to create the resources.
-
-Congratulations! You've successfully used Claude to generate Terraform code, set up an EC2 workstation, installed Terraform, and created an S3 bucket. This completes Day 1 of the MultiCloud DevOps & AI Challenge.
