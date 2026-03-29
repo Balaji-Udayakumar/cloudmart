@@ -1,4 +1,4 @@
-# MultiCloud, DevOps & AI Challenge - Day 3 (Experienced)
+# Part 3 - Continuous Deployment of CloudMart using AWS CodePipeline & Kubernetes
 
 ## Part 1: CI/CD Pipeline Configuration
 
