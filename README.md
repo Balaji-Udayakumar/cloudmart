@@ -195,43 +195,6 @@ CloudMart is a production-grade e-commerce prototype that demonstrates how moder
 <text x="194" y="514" dominant-baseline="central" style="fill:rgb(61, 61, 58);stroke:none;color:rgb(0, 0, 0);stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;opacity:1;font-family:&quot;Anthropic Sans&quot;, -apple-system, &quot;system-ui&quot;, &quot;Segoe UI&quot;, sans-serif;font-size:12px;font-weight:400;text-anchor:start;dominant-baseline:central">Cross-cloud call</text>
 </svg>
 
-```
-                          ┌─────────────┐
-                          │   OpenAI    │
-                          │  GPT-4o     │
-                          └──────┬──────┘
-                                 │ Customer support
-┌─────────┐   push   ┌──────────────────────────────────────────────────────────┐
-│ GitHub  │─────────▶│                      AWS Region                           │
-└─────────┘          │                                                            │
-                     │  ┌─────────────────────────────┐  ┌──────────────────┐   │
-                     │  │       EKS Cluster            │  │   DynamoDB       │   │
-                     │  │  ┌───────────┐ ┌──────────┐ │  │  (Products,      │   │
-                     │  │  │ Frontend  │ │ Backend  │─┼─▶│   Orders,        │   │
-                     │  │  │ React     │ │ Node.js  │ │  │   Tickets)       │   │
-                     │  │  └───────────┘ └────┬─────┘ │  └────────┬─────────┘   │
-                     │  │   Load Balancer      │       │           │ stream      │
-                     │  └─────────────────────┼───────┘  ┌────────▼─────────┐   │
-                     │                        │           │  Lambda Function  │   │
-                     │                        │           │  (products +      │   │
-                     │  ┌─────────────────────▼───────┐  │   streaming)      │   │
-                     │  │  Amazon Bedrock              │  └────────┬──────────┘   │
-                     │  │  Claude 3 Sonnet             │           │              │
-                     │  │  (Recommendation Agent)      │           │              │
-                     │  └─────────────────────────────┘           │              │
-                     │                                             │              │
-                     │  ┌──────────────────────────────────────┐  │              │
-                     │  │  CI/CD: CodePipeline → CodeBuild → ECR │              │
-                     │  └──────────────────────────────────────┘  │              │
-                     └─────────────────────────────────────────────┼─────────────┘
-                                                                    │ real-time stream
-                           ┌────────────────┐      ┌───────────────▼──────┐
-                           │ Microsoft Azure │      │   Google Cloud        │
-                           │ AI Language     │      │   BigQuery            │
-                           │ (Sentiment)     │      │   (Order analytics)   │
-                           └────────────────┘      └───────────────────────┘
-```
-
 ---
 
 ## Features
