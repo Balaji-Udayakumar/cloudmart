@@ -13,6 +13,7 @@ CloudMart is a production-grade e-commerce prototype that demonstrates how moder
 
 ## Architecture Overview
 
+cloudmart_architecture_diagram.svg
 
 ---
 
